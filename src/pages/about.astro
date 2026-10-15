@@ -14,7 +14,7 @@ const skills = ["Python", "Databases", "JavaScript", "React", "Astro", "Agentic 
 
 const happy = true;
 const finished = false;
-const goal = 30;
+let goal: number = 12;
 
 const
 skillColor = "tomato",
@@ -30,10 +30,6 @@ textCase = "uppercase"
 		<meta name="viewport" content="width=device-width" />
 		<meta name="generator" content={Astro.generator} />
 		<style define:vars={{skillColor, fontWeight, textCase}}>
-      h1 {
-        color: purple;
-        font-size: 4rem;
-      }
 			.skill {
 				color: var(--skillColor);
 				font-weight: var(--fontWeight);
@@ -67,8 +63,8 @@ textCase = "uppercase"
 			{skills.map((skill) => <li class="skill">{skill}</li>)}
 		</ul>
 
-		{ happy && <p>I am happy to be learning Astro!</p>}
+		{happy && <p>I am happy to finally be learning Astro!</p>}
 		{finished && <p>I finished this tutorial.</p>}
-		{	goal === 3 ? <p>My goal is to finish this tutorial in 3 days.</p> : <p>My goal is to finish this tutorial within 30 days.</p>}
+		{goal === 3 ? <p>My goal is to finish this tutorial in 3 days.</p> : <p>My goal is to finish this tutorial within {goal} days.</p>}
   </body>
 </html>

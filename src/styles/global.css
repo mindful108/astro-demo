@@ -1,5 +1,5 @@
 html {
-  background-color: #f1f5f9;
+  background-color: #dfecf9;
   font-family: sans-serif;
 }
 
@@ -9,6 +9,7 @@ body {
   max-width: 80ch;
   padding: 1rem;
   line-height: 1.5;
+  font-size: 18px;
 }
 
 * {
@@ -16,10 +17,22 @@ body {
 }
 
 h1 {
-  margin: 1rem 0;
-  font-size: 2.5rem;
+  color: purple;
+  margin: 2rem 0;
+  font-size: 3rem;
+  line-height: 1.2;
 }
 
 a {
-  padding-right: 2rem;
+  background: #fff;
+  padding: 8px 16px;
+  text-decoration-color: transparent;
+  text-underline-offset: 3px;
+  margin-right: 1.5rem;
+  border-radius: 8px;
+  transition: all 0.5s ease-in-out;
+
+  &:hover {
+    text-decoration-color: inherit;
+  }
 }
